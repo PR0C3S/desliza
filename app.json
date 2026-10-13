@@ -21,7 +21,14 @@
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#111114"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "permissions": [
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.READ_MEDIA_VISUAL_USER_SELECTED",
+        "android.permission.READ_MEDIA_IMAGES",
+        "android.permission.READ_MEDIA_VIDEO"
+      ]
     },
     "plugins": [
       "expo-router",
@@ -41,13 +48,22 @@
           "photosPermission": "Desliza necesita ver tus fotos y videos para mostrártelos uno a uno. Todo se queda en tu teléfono.",
           "savePhotosPermission": "Desliza necesita permiso para mover fotos y videos entre carpetas.",
           "isAccessMediaLocationEnabled": false,
-          "granularPermissions": ["photo", "video"]
+          "granularPermissions": [
+            "photo",
+            "video"
+          ]
         }
       ],
       "expo-font"
     ],
     "experiments": {
       "typedRoutes": false
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "e4b63ea4-2d30-4c4b-b2d2-9c4d3fc34ffd"
+      }
     }
   }
 }
